@@ -1,13 +1,129 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'HelveticaNeueUltraLight', sans-serif;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'HelveticaNeueUltraLight';
+  src: url('/Users/hamnatameez/app/src/fonts/HelveticaNeueUltraLight.otf') format('truetype');
+  font-weight: 100; /* Ultra Light */
+  font-style: normal;
+  letter-spacing: 1.6;
+}
+
+body {
+  background: #222;
+  font-family: 'HelveticaNeueUltraLight', 'Helvetica Neue', sans-serif;
+  font-weight: 100; /* Ultra Light */
+}
+
+.card{
+  width: 90%;
+  max-width: 470px;
+  background-image: url('https://media2.giphy.com/media/2tNvsKkc0qFdNhJmKk/200w.gif?cid=6c09b952iwwtahb0p1frkcgfjwcuqwngm7yjpd0tc7p6rsp7&ep=v1_gifs_search&rid=200w.gif&ct=g');
+  background-size: cover;
+  color: #fff;
+  margin: 70px auto 0;
+  border-radius: 20px;
+  padding: 25px 35px;
+  text-align: center;
+}
+
+.search{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input{
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+}
+
+.search button{
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.search button img{
+  width: 10px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.weather-icon{
+  width: 160px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  animation: fadeIn 1s;
+}
+
+.weather h1{
+  font-size: 39px;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  animation: fadeIn 1s;
+}
+
+.weather h2{
+  font-size: 80px;
+  font-weight: 500;
+  animation: fadeIn 1s;
+}
+
+.weather h3{
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: -10px;
+  animation: fadeIn 1s;
+}
+
+.details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+
+.col{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  animation: fadeIn 1s;
+}
+
+.col img{
+  width: 40px;
+  margin-right: 10px;
+  animation: fadeIn 1s;
+}
+
+.humidity, .wind {
+  font-size: 20px;
+  margin-top: -6px;
+}
+
+.weather {
+  display: none;
 }
